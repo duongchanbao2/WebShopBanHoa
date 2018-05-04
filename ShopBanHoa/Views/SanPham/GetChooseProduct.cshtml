@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ShopBanHoa.Models.Choose_product>
+
+@foreach (var i in Model)
+{
+    <h5 class="m_1">Loại Hoa </h5>
+    
+    
+    <ul class="kids">
+        <li><a href="#">@i.category_name</a></li>
+        
+    </ul>
+    <section class="sky-form">
+        <h4> Giá </h4>
+        <div class="row row1 scroll-pane">
+            <div class="col col-4">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Rs 500 - Rs 700</label>
+            </div>
+            <div class="col col-4">
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>@i.price</label>
+        
+            </div>
+        </div>
+    </section>
+    
+     
+    <section class="sky-form">
+        <h4>Colors</h4>
+        <ul class="color-list">
+            <li><a href="#"> <span class="color1"> </span><p class="red">@i.Color</p></a></li>
+           
+        </ul>
+    </section>
+}

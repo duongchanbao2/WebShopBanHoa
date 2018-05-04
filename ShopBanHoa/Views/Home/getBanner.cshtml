@@ -1,0 +1,14 @@
+﻿@model IEnumerable<ShopBanHoa.Models.banner>
+
+@foreach (var i in Model)
+{
+    <div class="slide" style="display: none; z-index: 0; opacity: 1;">
+        <img src="~/Content/update/banner/@i.image" alt="">
+        <div class="slide_content">
+            <div class="slide_content_wrap">
+                <h4 class="title" style="opacity: 0;">@i.title1</h4>
+                <p class="description" style="opacity: 0;">@i.title2</p>
+            </div>
+        </div>
+    </div>
+}

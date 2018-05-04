@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ShopBanHoa.Models.Gioithieu>
+
+
+
+
+@foreach (var i in Model)
+{
+
+<div class="col_1_of_about-box span_1_of_about-box">
+    <a class= href="@{Html.ActionLink("Index", "Sanpham");} ">  <img src="~/Content/update/product/Hoa/@i.img" title="continue" alt="" /></a>
+    <h4 class="m_7"><a href="#">@i.name</a></h4>
+    <p>@i.noidung</p>
+</div>
+    
+
+
+
+
+}
+
+

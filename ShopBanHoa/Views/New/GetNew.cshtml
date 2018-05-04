@@ -1,0 +1,8 @@
+﻿@model IEnumerable<ShopBanHoa.Models.news>
+
+
+
+@foreach (var i in Model)
+{
+    <a href="@ViewBag.meta/tin-tuc/chi-tiet/@i.id"><button type="submit" class="btn btn-primary btn-lg btn-block" style="padding:5%">@i.name</button></a>
+}

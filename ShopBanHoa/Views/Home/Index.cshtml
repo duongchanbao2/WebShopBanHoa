@@ -1,0 +1,82 @@
+﻿<!-- start slider -->
+<!-- Bootstrap Core CSS -->
+<div id="fwslider" style="height: 485px;">
+    <div class="slider_container">
+        @{Html.RenderAction("getBanner", "Home");}
+    </div>
+    <div class="timers" style="width: 135px;"><div class="timer"><div class="progress" style="width: 100%; overflow: hidden;"></div></div><div class="timer"><div class="progress" style="overflow: hidden; width: 12.44%;"></div></div></div>
+    <div class="slidePrev" style="left: 0px; top: 207.5px;"><span></span></div>
+    <div class="slideNext" style="right: 0px; top: 207.5px; opacity: 0.5;"><span></span></div>
+</div>
+<!--/slider -->
+<div class="main">
+    <div class="wrap">
+        <div class="section group">
+            <div class="cont span_2_of_3">
+                <h2 class="head">Hoa cưới</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaCuoi", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa tốt nghiệp</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaTotNghiep", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa sinh nhật</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaSN", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa khai trương</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaKhaiTruong", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa thăng chức</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaThangChuc", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa viếng</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaVieng", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="rsidebar span_1_of_left">
+                <div class="top-border"> </div>
+                <div class="border">
+                    <link href="~/Content/css/default.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href="~/Content/css/nivo-slider.css" rel="stylesheet" type="text/css" media="all" />
+                    <script src="~/Content/js/jquery.nivo.slider.js"></script>
+                    <script type="text/javascript">
+                        $(window).load(function () {
+                            $('#slider').nivoSlider();
+                        });
+                    </script>
+                    <div class="slider-wrapper theme-default">
+                        <div id="slider" class="nivoSlider">
+                            @{ Html.RenderAction("getborder", "Home");}
+                        </div>
+                    </div>
+                    <div class="btn"><a href="single.html">Check it Out</a></div>
+                </div>
+                <div class="top-border"> </div>
+                <div class="sidebar-bottom" style="background-color: red; border-radius: 10px; color: white; font-weight: bold">Tin mới</div>
+                <div class="sidebar-bottom">
+                    @{ Html.RenderAction("getnew", "new");}
+                    <hr />
+                    <div class="subscribe">
+                        <form>
+                            <input name="userName" type="text" class="textbox" placeholder="Nhập nội dung cần tìm">
+                            <input type="submit" value="Tìm kiếm">
+                        </form>
+                    </div>
+                </div>
+                <iframe width="243" height="145" src="https://www.youtube.com/embed/epGzL7dr0C0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

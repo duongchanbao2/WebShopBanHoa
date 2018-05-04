@@ -1,0 +1,6 @@
+﻿@model IEnumerable<ShopBanHoa.Models.menu>
+
+@foreach(var i in Model)
+{
+    <li class="active grid"><a href="@ViewBag.meta/@i.meta">@i.title</a></li>
+}

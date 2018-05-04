@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "San pham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="mens">
+    <div class="main">
+        <div class="wrap">
+            <div class="cont span_2_of_3" >
+                <h2 class="head">Hoa cưới</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaCuoi", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa tốt nghiệp</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaTotNghiep", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa sinh nhật</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaSN", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa khai trương</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaKhaiTruong", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa thăng chức</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaThangChuc", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="head">Hoa viếng</h2>
+                <div class="top-box1">
+                    @{ Html.RenderAction("getProductHoaVieng", "SanPham");}
+                    <div class="clear"></div>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/js/jquery.easydropdown.js"></script>

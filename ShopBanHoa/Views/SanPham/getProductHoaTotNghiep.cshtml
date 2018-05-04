@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ShopBanHoa.Models.product>
+
+@foreach (var i in Model)
+{
+    <div class="col_1_of_3 span_1_of_3">
+        <a href="@ViewBag.meta/san-pham/chi-tiet/@i.id ">
+            <div class="inner_content clearfix">
+                <div class="product_image">
+                    <img src="~/Content/update/product/Hoa/@i.img" alt="" style="height: 220px" />
+                </div>
+                <div class="sale-box"><span class="on_sale title_shop">New</span></div>
+                <div class="price">
+                    <div class="cart-left">
+                        <p class="title">@i.name</p>
+                        <div class="price1">
+                            <span class="actual">@i.price</span>
+                        </div>
+                    </div>
+                    <div class="cart-right"> </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+}
+

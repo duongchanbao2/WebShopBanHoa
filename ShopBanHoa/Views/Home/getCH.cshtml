@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ShopBanHoa.Models.CuaHang>
+
+@foreach (var i in Model)
+{
+    <div class="col_1_of_f_2 span_1_of_f_2">
+        <h3>Thông Tin LIên Hệ</h3>
+        <div class="company_address">
+            <p>@i.TenCH</p>
+            <p>@i.DiaChi</p>
+            <p>USA</p>
+            <p>@i.SDT</p>
+            <p>Fax: (000) 000 00 00 0</p>
+            <p>Email: <span>mail[at]leoshop.com</span></p>
+
+        </div>
+        
+    </div>
+}

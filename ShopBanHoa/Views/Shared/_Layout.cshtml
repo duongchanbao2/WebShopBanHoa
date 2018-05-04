@@ -1,0 +1,400 @@
+﻿<!
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+    <!-- MetisMenu CSS -->
+    <link href="~/Areas/admin/Content/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Social Buttons CSS -->
+    <link href="~/Areas/admin/Content/vendor/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/Areas/admin/Content/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Areas/admin/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@ViewBag.Title Shop Bán Hoa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/css/form.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="~/Content/js/jquery1.min.js"></script>
+    <!-- start menu -->
+    <link href="~/Content/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Content/js/megamenu.js"></script>
+    <script>$(document).ready(function () { $(".megamenu").megamenu(); });</script>
+    <!--start slider -->
+    <link rel="stylesheet" href="~/Content/css/fwslider.css" media="all">
+    <script src="~/Content/js/jquery-ui.min.js"></script>
+    <script src="~/Content/js/css3-mediaqueries.js"></script>
+    <script src="~/Content/js/fwslider.js"></script>
+    <!--end slider -->
+    <script src="~/Content/js/jquery.easydropdown.js"></script>
+</head>
+<body>
+    <div class="header-top">
+        <div class="wrap">
+            <div class="header-top-left">
+                <div class="box">
+                    <select tabindex="4" class="dropdown">
+                        <option value="" class="label" value="">Language :</option>
+                        <option value="1">English</option>
+                        <option value="2">French</option>
+                        <option value="3">German</option>
+                    </select>
+                </div>
+                <div class="box1">
+                    <select tabindex="4" class="dropdown">
+                        <option value="" class="label" value="">Currency :</option>
+                        <option value="1">$ Dollar</option>
+                        <option value="2">€ Euro</option>
+                    </select>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+
+                    <li><a href="login.html">Log In</a></li> |
+                    <li><a href="register.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap">
+            <div class="header-bottom-left">
+                <div class="logo">
+                    <a href="@ViewBag.meta/#"><img src="~/Content/images/logo1.png" alt="" /></a>
+                </div>
+                <div class="menu">
+                    <ul class="megamenu skyblue">
+                        @{ Html.RenderAction("getMenu", "home");}
+                    </ul>
+                </div>
+            </div>
+            <div class="header-bottom-right">
+                <div class="search">
+                    <FORM method=GET action="http://www.google.com/search">
+                        <input type=text name=q size=25 maxlength=255 value="">
+                        <input type=submit name=btng value="Tìm kiếm">
+                    </FORM>
+                </div>
+                <div class="tag-list">
+                    <ul class="icon1 sub-icon1 profile_img">
+                        <li>
+                            <a class="active-icon c1" href="#"> </a>
+                            <ul class="sub-icon1 list">
+                                <li><h3>sed diam nonummy</h3><a href=""></a></li>
+                                <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="icon1 sub-icon1 profile_img">
+                        <li>
+                            <a class="active-icon c2" href="#"> </a>
+                            <ul class="sub-icon1 list">
+                                <li><h3>No Products</h3><a href=""></a></li>
+                                <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="last"><li><a href="#">Cart(0)</a></li></ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    @RenderBody()
+
+    <div class="footer">
+        <div class="footer-top">
+            <div class="wrap">
+                <div class="section group example">
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="wrap">
+                <!-- <div class="section group">
+                      <div class="f_10">
+                          <div class="col_1_of_4 span_1_of_4">
+                              <h3>Facebook</h3>
+                              <script>(function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                                fjs.parentNode.insertBefore(js, fjs);
+                              }(document, 'script', 'facebook-jssdk'));</script>
+                              <div class="like_box">
+                                  <div class="fb-like-box" data-href="http://www.facebook.com/w3layouts" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+                              </div>
+                          </div>
+                          <div class="col_1_of_4 span_1_of_4">
+                              <h3>From Twitter</h3>
+                              <div class="recent-tweet">
+                                  <div class="recent-tweet-icon">
+                                      <span> </span>
+                                  </div>
+                                  <div class="recent-tweet-info">
+                                      <p>Ds which don't look even slightly believable. If you are <a href="#">going to use nibh euismod</a> tincidunt ut laoreet adipisicing</p>
+                                  </div>
+                                  <div class="clear"> </div>
+                              </div>
+                              <div class="recent-tweet">
+                                  <div class="recent-tweet-icon">
+                                      <span> </span>
+                                  </div>
+                                  <div class="recent-tweet-info">
+                                      <p>Ds which don't look even slightly believable. If you are <a href="#">going to use nibh euismod</a> tincidunt ut laoreet adipisicing</p>
+                                  </div>
+                                  <div class="clear"> </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="f_10">
+                          <div class="col_1_of_4 span_1_of_4">
+                              <h3>Information</h3>
+                              <ul class="f-list1">
+                                  <li><a href="#">Duis autem vel eum iriure </a></li>
+                                  <li><a href="#">anteposuerit litterarum formas </a></li>
+                                  <li><a href="#">Tduis dolore te feugait nulla</a></li>
+                                   <li><a href="#">Duis autem vel eum iriure </a></li>
+                                  <li><a href="#">anteposuerit litterarum formas </a></li>
+                                  <li><a href="#">Tduis dolore te feugait nulla</a></li>
+                              </ul>
+                          </div>
+                          <div class="col_1_of_4 span_1_of_4">
+                              <h3>Contact us</h3>
+                              <div class="company_address">
+                                          <p>500 Lorem Ipsum Dolor Sit,</p>
+                                          <p>22-56-2-9 Sit Amet, Lorem,</p>
+                                          <p>USA</p>
+                                  <p>Phone:(00) 222 666 444</p>
+                                  <p>Fax: (000) 000 00 00 0</p>
+                                  <p>Email: <span>mail[at]leoshop.com</span></p>
+
+                             </div>
+                             <div class="social-media">
+                                   <ul>
+                                      <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="#" target="_blank"> </a></span></li>
+                                      <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Linked in"><a href="#" target="_blank"> </a> </span></li>
+                                      <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Rss"><a href="#" target="_blank"> </a></span></li>
+                                      <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+                                  </ul>
+                             </div>
+                          </div>
+                      <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+                </div>-->
+
+                <div class="section group example">
+                    <div class="col_1_of_f_1 span_1_of_f_1">
+                        <div class="section group example">
+                            <div class="col_1_of_f_2 span_1_of_f_2">
+                                <h3>Facebook</h3>
+                                <script>
+                                    <div id="fb-root"></div>
+
+                                    (function (d, s, id) {
+                                        var js, fjs = d.getElementsByTagName(s)[0];
+                                        if (d.getElementById(id)) return;
+                                        js = d.createElement(s); js.id = id;
+                                        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12';
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }(document, 'script', 'facebook-jssdk'));</script>
+                                <div class="fb-page" data-href="https://www.facebook.com/SHOPHOATUOIFLOW/" data-tabs="timeline" data-height="350" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/SHOPHOATUOIFLOW/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SHOPHOATUOIFLOW/">Shop Hoa Tươi FLow  số 1 TP.HCM</a></blockquote></div>
+                            </div>
+                            <div class="col_1_of_f_2 span_1_of_f_2">
+                                <h3>Liên Kết </h3>
+                                <div class="social-media">
+                                    <ul>
+                                        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="https://plus.google.com/u/0/" target="_blank"> </a></span></li>
+                                        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Linked in"><a href="https://vn.linkedin.com/" target="_blank"> </a> </span></li>
+                                        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Rss"><a href="https://www.rss.com/" target="_blank"> </a></span></li>
+                                        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="https://www.facebook.com/SHOPHOATUOIFLOW/" target="_blank"> </a></span></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col_1_of_f_1 span_1_of_f_1">
+                        <div class="section group example">
+                            <div class="col_1_of_f_2 span_1_of_f_2">
+                                <h3>Loại Sản Phẩm</h3>
+
+                                @{ Html.RenderAction("getCNhanh", "Home");}
+                            </div>
+                            @{ Html.RenderAction("getCH", "Home");}
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="wrap">
+                <div class="copy">
+                    <p>© 2018<a href="https://www.facebook.com/Thongchanpau" target="_blank"> Thòng Chắn Pẩu</a></p>
+                </div>
+                <div class="f-list2">
+                    <ul>
+                        <li class="active"><a href="@Url.Action("Index","About")"> Về Chúng Tôi</a></li> |
+
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    </pre>
+    <style>
+        .fb-livechat, .fb-widget {
+            display: none
+        }
+
+        .ctrlq.fb-button, .ctrlq.fb-close {
+            position: fixed;
+            right: 24px;
+            cursor: pointer
+        }
+
+        .ctrlq.fb-button {
+            z-index: 1;
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyOCAxMjgiIGhlaWdodD0iMTI4cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB3aWR0aD0iMTI4cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxyZWN0IGZpbGw9IiMwMDg0RkYiIGhlaWdodD0iMTI4IiB3aWR0aD0iMTI4Ii8+PC9nPjxwYXRoIGQ9Ik02NCwxNy41MzFjLTI1LjQwNSwwLTQ2LDE5LjI1OS00Niw0My4wMTVjMCwxMy41MTUsNi42NjUsMjUuNTc0LDE3LjA4OSwzMy40NnYxNi40NjIgIGwxNS42OTgtOC43MDdjNC4xODYsMS4xNzEsOC42MjEsMS44LDEzLjIxMywxLjhjMjUuNDA1LDAsNDYtMTkuMjU4LDQ2LTQzLjAxNUMxMTAsMzYuNzksODkuNDA1LDE3LjUzMSw2NCwxNy41MzF6IE02OC44NDUsNzUuMjE0ICBMNTYuOTQ3LDYyLjg1NUwzNC4wMzUsNzUuNTI0bDI1LjEyLTI2LjY1N2wxMS44OTgsMTIuMzU5bDIyLjkxLTEyLjY3TDY4Ljg0NSw3NS4yMTR6IiBmaWxsPSIjRkZGRkZGIiBpZD0iQnViYmxlX1NoYXBlIi8+PC9zdmc+) center no-repeat #0084ff;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            bottom: 24px;
+            border: 0;
+            outline: 0;
+            border-radius: 60px;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            -ms-border-radius: 60px;
+            -o-border-radius: 60px;
+            box-shadow: 0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);
+            -webkit-transition: box-shadow .2s ease;
+            background-size: 80%;
+            transition: all .2s ease-in-out
+        }
+
+            .ctrlq.fb-button:focus, .ctrlq.fb-button:hover {
+                transform: scale(1.1);
+                box-shadow: 0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.24)
+            }
+
+        .fb-widget {
+            background: #fff;
+            z-index: 2;
+            position: fixed;
+            width: 360px;
+            height: 435px;
+            overflow: hidden;
+            opacity: 0;
+            bottom: 0;
+            right: 24px;
+            border-radius: 6px;
+            -o-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            box-shadow: 0 5px 40px rgba(0,0,0,.16);
+            -webkit-box-shadow: 0 5px 40px rgba(0,0,0,.16);
+            -moz-box-shadow: 0 5px 40px rgba(0,0,0,.16);
+            -o-box-shadow: 0 5px 40px rgba(0,0,0,.16)
+        }
+
+        .fb-credit {
+            text-align: center;
+            margin-top: 8px
+        }
+
+            .fb-credit a {
+                transition: none;
+                color: #bec2c9;
+                font-family: Helvetica,Arial,sans-serif;
+                font-size: 12px;
+                text-decoration: none;
+                border: 0;
+                font-weight: 400
+            }
+
+        .ctrlq.fb-overlay {
+            z-index: 0;
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            -webkit-transition: opacity .4s,visibility .4s;
+            transition: opacity .4s,visibility .4s;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,.05);
+            display: none
+        }
+
+        .ctrlq.fb-close {
+            z-index: 4;
+            padding: 0 6px;
+            background: #365899;
+            font-weight: 700;
+            font-size: 11px;
+            color: #fff;
+            margin: 8px;
+            border-radius: 3px
+        }
+
+            .ctrlq.fb-close::after {
+                content: 'x';
+                font-family: sans-serif
+            }
+    </style>
+
+    <div class="fb-livechat">
+        <div class="ctrlq fb-overlay"></div>
+        <div class="fb-widget">
+            <div class="ctrlq fb-close"></div>
+            <div class="fb-page" data-href="https://www.facebook.com/SHOPHOATUOIFLOW/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/SHOPHOATUOIFLOW/" class="fb-xfbml-parse-ignore"> </blockquote>
+            </div>
+            <div class="fb-credit">
+                <a href="https://www.facebook.com/SHOPHOATUOIFLOW/" target="_blank">Truy cập FanPage</a>
+            </div>
+            <div id="fb-root"></div>
+        </div>
+        <a href="https://www.facebook.com/SHOPHOATUOIFLOW" title="gửi tin nhắn cho tôi" class="ctrlq fb-button"></a>
+    </div>
+
+    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>$(document).ready(function () { var t = { delay: 125, overlay: $(".fb-overlay"), widget: $(".fb-widget"), button: $(".fb-button") }; setTimeout(function () { $("div.fb-livechat").fadeIn() }, 8 * t.delay), $(".ctrlq").on("click", function (e) { e.preventDefault(), t.overlay.is(":visible") ? (t.overlay.fadeOut(t.delay), t.widget.stop().animate({ bottom: 0, opacity: 0 }, 2 * t.delay, function () { $(this).hide("slow"), t.button.show() })) : t.button.fadeOut("medium", function () { t.widget.stop().show().animate({ bottom: "30px", opacity: 1 }, 2 * t.delay), t.overlay.fadeIn(t.delay) }) }) });</script>
+<pre>
+
+</body>
+</html>

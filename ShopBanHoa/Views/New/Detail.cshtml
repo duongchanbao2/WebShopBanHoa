@@ -1,0 +1,92 @@
+﻿@model ShopBanHoa.Models.news
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/css/form.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+    <script src="~Content/js/jquery1.min.js"></script>
+    <!-- start menu -->
+    <link href="~/Content/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Content/js/megamenu.js"></script>
+    <script>$(document).ready(function () { $(".megamenu").megamenu(); });</script>
+    <script type="text/javascript" src="~/Content/js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" id="sourcecode">
+        $(function () {
+            $('.scroll-pane').jScrollPane();
+        });
+    </script>
+    <!-- start details -->
+    <script src="~/Content/js/slides.min.jquery.js"></script>
+    <script>
+        $(function () {
+            $('#products').slides({
+                preload: true,
+                preloadImage: 'img/loading.gif',
+                effect: 'slide, fade',
+                crossfade: true,
+                slideSpeed: 350,
+                fadeSpeed: 500,
+                generateNextPrev: true,
+                generatePagination: false
+            });
+        });
+    </script>
+    <!-- start zoom -->
+    <link rel="stylesheet" href="~/Content/css/zoome-min.css" />
+    <script type="text/javascript" src="~/Content/js/zoome-e.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#img1,#img2,#img3,#img4').zoome({ showZoomState: true, magnifierSize: [250, 250] });
+        });
+    </script>
+</head>
+
+
+
+<body>
+   
+
+    <div class="login">
+        <div class="wrap">
+            <ul class="breadcrumb breadcrumb__t"><a class="home" @Url.Action("Home", "Index")>Trang Chủ</a>  / Tin tức</ul>
+            <h5 class="m_6" style="text-align:center">@Model.name</h5>
+            <p class="m_text">@Model.description</p>
+            <ul class="delivery-list">
+                <center>
+                    <img src="~/Content/update/newimg/@Model.img" alt="@Model.name" height="90%" style="text-align:center ; width : 50%" />
+                </center>
+                <p class="m_text">@Model.description</p>
+
+            </ul>
+            <ul class="delivery-list">
+                <center>
+                    <img src="~/Content/update/newimg/@Model.img1" alt="@Model.name" height="90%" style="text-align:center ; width : 50%" />
+                </center>
+                <p class="m_text">@Model.description1</p>
+
+            </ul>
+            <ul class="delivery-list">
+                <center>
+                    <img src="~/Content/update/newimg/@Model.img2" alt="@Model.name" height="90%" style="text-align:center ; width : 50%" />
+                </center>
+                <p class="m_text">@Model.description2</p>
+
+            </ul>
+            <ul class="delivery-list">
+
+                <p class="m_text">@Model.detail</p>
+
+            </ul>
+            <p class="m_text" style="text-align:right"> @Model.nguon</p>
+        </div>
+    </div>
+
+</body>
